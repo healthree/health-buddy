@@ -1,0 +1,22 @@
+{
+  "name": "health-buddy",
+  "version": "1.0.0",
+  "description": "A full stack application for a hospital set up, that can be used both by walk in patients and staff at the hospital",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/healthree/health-buddy.git"
+  },
+  "author": "Team 3",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/healthree/health-buddy/issues"
+  },
+  "homepage": "https://github.com/healthree/health-buddy#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
