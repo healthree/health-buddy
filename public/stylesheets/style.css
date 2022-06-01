@@ -43,7 +43,7 @@ button:hover {
 
 
 
-.post-list {
+/* .post-list {
   margin: 0 0 0 -15%;
   padding: 0;
 } 
@@ -70,9 +70,9 @@ form > div {
 
 form label {
   display: block;
-}
+} */
 
-.wrapper {
+.main-wrap {
   width: 100%;
   min-height: 100%;
   max-width: 1500px;
@@ -93,7 +93,7 @@ header {
 
 header h1 {
   font-size: 2em;
-  color: #30336b;
+  color: #ff5a5a;
   font-weight: bolder;
 }
 
@@ -102,13 +102,17 @@ main {
   padding: 2% 4%;
 }
 
-.btn-no-style {
+.patient-btn,
+.edit-btn,
+.delete-btn,
+.access-btn,
+.doctors.btn {
   background: none;
-  border: none;
+  border: #ff5a5a;
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #B53471;
+  color: #ff5a5a;
   font-size: large;
   font-weight: bold;
   transition: color .1s;
@@ -117,16 +121,24 @@ main {
 }
 
 .btn-no-style:hover {
-  background: none;
-  color: #3486eb;
+  background: #ff5a5a;
+  color: #ffffff;
 }
 
-.delete-post-btn {
+#delete-patient-btn {
   background-color: #d41414;
 }
 
-.delete-post-btn:hover {
+#delete-patient-btn:hover {
   background-color: #ff643d;
+}
+
+#edit-patient-btn {
+  background-color: #3486eb;
+}
+
+#edit-patient-btn:hover {
+  background-color: #225ca3;
 }
 
 .post {
@@ -145,24 +157,6 @@ main {
   margin: -1.5% 0 2% 0;
 }
 
-.comment-form {
-  margin-bottom: 5%;
-}
-
-.comment {
-  padding: 1%;
-  margin-bottom: 1%;
-}
-
-.comment:nth-child(odd) {
-  background-color: #fff5eb;
-}
-
-.comment .meta {
-  font-size: 90%;
-  margin-bottom: .5%;
-  opacity: .6;
-}
 
 .new-post-form input {
   width: 300px;
