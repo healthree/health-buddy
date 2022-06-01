@@ -2,7 +2,7 @@
   "name": "health-buddy",
   "version": "1.0.0",
   "description": "A full stack application for a hospital set up, that can be used both by walk in patients and staff at the hospital",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest",
     "start": "node server.js",
