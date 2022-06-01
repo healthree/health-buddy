@@ -2,12 +2,12 @@ const User = require('./User');
 const Doctors = require('./Doctors');
 const Clients = require('./Clients');
 
-Clients.hasMany(Doctors,{
-    foreignKey: 'clients_id',
+Doctors.hasMany(Clients,{
+    foreignKey: 'doctors_id',
 });
 
-Doctors.belongsTo(Clients,{
-    foreignKey: 'clients_id',
+Clients.belongsTo(Doctors,{
+    foreignKey: 'doctors_id',
 });
 
 module.exports = {User, Doctors, Clients};

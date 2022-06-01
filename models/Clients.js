@@ -23,6 +23,21 @@ Clients.init(
             type: DataTypes.DATE,
             allowNull: false,
         },
+        symptoms: {
+            type: DataType.STRING,
+            allowNull:false,
+        },
+        medical_history: {
+            type: DataType.STRING,
+            allowNull: true,
+        },
+        doctors_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'doctors',
+                key: 'id',
+            },
+        },
     },
     {
         sequelize,
