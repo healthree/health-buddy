@@ -1,11 +1,13 @@
 <article class="patient">
-  <div class="patient-layout">
-    <div class="patient-title-style">
-      <h3 class="patient-title">{{patient.title}}</h3>
+  {{#each clients}}
+    <div class="patient-layout">
+      <div class="patient-title-style">
+        <h3 class="patient-title">{{name}}</h3>
+      </div>
+      <div class="patient-description-style">
+        <p>{{symptoms}}</p>
+      </div>
+      <button>Delete</button>
     </div>
-    <div class="patient-description-style">
-      <p>{{patient_description}}</p>
-    </div>
-    <button>Delete</button>
-  </div>
+  {{/each}}
 </article>
