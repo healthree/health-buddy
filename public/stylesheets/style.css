@@ -17,7 +17,7 @@ a {
   font-weight: bold;
   transition: color .1s;
   padding: 15px;
-  font-size: large;
+  font-size: larger;
 }
 
 a:hover {
@@ -82,13 +82,20 @@ form label {
   flex-direction: column;
 }
 
+.main-bg {
+  margin-left: 25%;
+}
+
+.main-btn {
+  margin-top: -25%;
+}
+
 header {
   border-bottom: 1px solid #1cccd3;
-  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1% 1%;
+  padding: .025% 1%;
 }
 
 
@@ -167,9 +174,22 @@ footer {
   color: #1cccd3;
   display: flex;
   justify-content: space-between;
-  padding: 1%;
+
+  padding: .5%;
   font-size: 110%;
   font-style: italic;
   font-weight: 700;
 }
 
+
+.footer-address {
+  font-size: medium;
+  color: #1f2b5b;
+  margin-top: 1.5%;
+}
+
+.footer-copy {
+  font-size: small;
+  color: #1f2b5b;
+  margin-top: .75%;
+}

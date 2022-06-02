@@ -31,6 +31,9 @@ Doctors.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        note: {
+            type: DataTypes.STRING,
+        }
     },
     {
         sequelize,
