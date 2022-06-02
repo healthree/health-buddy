@@ -1,0 +1,15 @@
+<ol class="patient-list">
+  {{#each patients as |patient|}}
+  <li style="list-style-type: none;">
+    {{> patient-information patient }}
+  </li>
+  {{/each}}
+</ol>
+
+<ol class="doctor-list">
+  {{#each doctors as |doctor|}}
+  <li style="list-style-type: none;">
+    {{> doctor-information doctor }}
+  </li>
+  {{/each}}
+</ol>
