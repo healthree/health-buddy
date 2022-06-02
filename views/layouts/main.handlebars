@@ -32,7 +32,11 @@
     </header>
     {{!-- make background for main a picture --}}
     <main class="main-main">
-      {{#if loggedIn}}
+      
+      {{ body }}
+
+    {{!-- previous loggin code --}}
+      {{!-- {{#if loggedIn}}
       <button id="patient-btn">New Patient</button>
       <button id="edit-btn">Edit File</button>
       <button id="delete-btn">Delete File</button>
@@ -47,7 +51,7 @@
           <li style="list-style-type: none;">
             {{> patient-information patient}}
             {{!--/maim/edit/{{patient.id}} --}}
-            <a href="/edit/{{patient.id}}" id="edit-patient-btn">Edit</a>
+            {{!-- <a href="/edit/{{patient.id}}" id="edit-patient-btn">Edit</a>
             <button id="delete-patient-btn">Delete</button>
           </li>
           {{/each}}
@@ -58,7 +62,7 @@
       {{else}}
       <button id="bmi-btn">Check BMI</button>
       <button id="who-btn">Who Should I See?</button>
-      {{/if}}
+      {{/if}} --}}
     </main>
   </div>
   <footer>
