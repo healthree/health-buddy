@@ -22,6 +22,7 @@ a {
 
 a:hover {
   color: #ff5a5a;
+  text-decoration: none;
 }
 
 button {
@@ -82,7 +83,6 @@ form label {
 }
 
 header {
-  background-image: url("../images/health\ buddy\ white.png");
   border-bottom: 1px solid #1cccd3;
   background-color: #ffffff;
   display: flex;
@@ -91,11 +91,6 @@ header {
   padding: 1% 1%;
 }
 
-header h1 {
-  font-size: 2em;
-  color: #ff5a5a;
-  font-weight: bolder;
-}
 
 main {
   flex: 1;
@@ -167,13 +162,14 @@ main {
 }
 
 footer {
-  background-image: url("../images/health\ buddy-footer.png");
-  background-color: #1cccd3;
-  color: #ffffff;
+  border-top: 1px solid #ff5a5a;
+  background-color: #ffffff;
+  color: #1cccd3;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 1%;
   font-size: 110%;
   font-style: italic;
-  font-weight: bold;
+  font-weight: 700;
 }
+
