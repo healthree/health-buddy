@@ -1,7 +1,7 @@
 <ol class="patient-list">
-  {{#each patients as |patient|}}
+  {{#each doctors as |client|}}
   <li style="list-style-type: none;">
-    {{> patient-information patient }}
+    {{> patient-information client }}
   </li>
   {{/each}}
 </ol>

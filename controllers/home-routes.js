@@ -6,13 +6,13 @@ router.get("/", (req, res) => {
   Doctors.findAll({
     include: {
       model: Clients,
-      attributes: ["name"],
+      attributes: ["name", "symptoms"],
     },
   })
     .then((dbPostData) => {
-      const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render("main", {
-        posts,
+      const doctors = dbPostData.map((doctors) => doctors.get({ plain: true }));
+      res.render("homepage", {
+        doctors,
       });
     })
     .catch((err) => {
