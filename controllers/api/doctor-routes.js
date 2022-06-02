@@ -29,7 +29,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.post("/", withAuth, (req, res) => {
+router.post("/", (req, res) => {
   Doctors.create({
     name: req.body.name,
     gender: req.body.gender,
