@@ -6,13 +6,14 @@ router.get("/", (req, res) => {
   Doctors.findAll({
     include: {
       model: Clients,
-      attributes: ["name"],
+      attributes: ["name", "symptoms"],
     },
   })
     .then((dbPostData) => {
-      const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render("main", {
-        posts,
+      const doctors = dbPostData.map((doctors) => doctors.get({ plain: true }));
+      res.render("homepage", {
+        doctors,
+        loggedIn: req.session.loggedIn,
       });
     })
     .catch((err) => {
@@ -28,7 +29,6 @@ router.get("/doctor/:id", (req, res) => {
     },
     include: {
       model: Clients,
-      attributes: ["name"],
     },
   })
     .then((dbPostData) => {
@@ -41,6 +41,7 @@ router.get("/doctor/:id", (req, res) => {
 
       res.render("single-doctor", {
         doctor,
+        loggedIn: req.session.loggedIn,
       });
     })
     .catch((err) => {

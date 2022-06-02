@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Patients:</h5>
+  </div>
+  {{#each clients}}
+    <div class="card-body">
+      <h6 class="card-title">{{name}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">
+        {{symptoms}}</h6>
+      <i><p class="card-text">medical_history: {{medical_history}}</p></i>
+    </div>
+  {{/each}}
+</div>

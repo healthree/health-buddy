@@ -17,13 +17,12 @@
 <body>
   <div class="main-wrap">
     <header>
-      <img src="../images/healthbuddywhite.png" alt="" width="400" height="125">
+      <a href="/"><img src="../images/healthbuddywhite.png" alt="" width="400" height="125"></a>
       <nav class="main-nav">
-        <a href="/about-us">About Us/Our Team</a>
+        <a href="https://github.com/healthree/health-buddy">About Us/Our Team</a>
         {{#if loggedIn}}
         {{!-- Change to respective javascript name --}}
         {{!-- <h3>Welcome {{ user.name }}</h3> --}}
-        <a href="/dashboard">Patient Information</a>
         <button id="logout" class="btn-no-style">Signout</button>
         {{else}}
         <a href="/login">Admin Access</a>
@@ -32,7 +31,11 @@
     </header>
     {{!-- make background for main a picture --}}
     <main class="main-main">
-      {{#if loggedIn}}
+      
+      {{{ body }}}
+
+    {{!-- previous loggin code --}}
+      {{!-- {{#if loggedIn}}
       <button id="patient-btn">New Patient</button>
       <button id="edit-btn">Edit File</button>
       <button id="delete-btn">Delete File</button>
@@ -47,7 +50,7 @@
           <li style="list-style-type: none;">
             {{> patient-information patient}}
             {{!--/maim/edit/{{patient.id}} --}}
-            <a href="/edit/{{patient.id}}" id="edit-patient-btn">Edit</a>
+            {{!-- <a href="/edit/{{patient.id}}" id="edit-patient-btn">Edit</a>
             <button id="delete-patient-btn">Delete</button>
           </li>
           {{/each}}
@@ -56,14 +59,9 @@
       {{/if}}
 
       {{else}}
-      <div class="main-bg">
-        <img src="../images/healthbuddybg.png" alt="" width="1000" height="600">
-      </div>
-      <div class="main-btn">
-        <button id="bmi-btn">Check BMI</button>
-        <button id="who-btn">Who Should I See?</button>
-      </div>
-      {{/if}}
+      <button id="bmi-btn">Check BMI</button>
+      <button id="who-btn">Who Should I See?</button>
+      {{/if}} --}}
     </main>
   </div>
   <footer>

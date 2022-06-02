@@ -1,0 +1,7 @@
+<ol class="doctor-list">
+  {{#each doctors as |doctor|}}
+  <li style="list-style-type: none;">
+    {{> doctor-information doctor }}
+  </li>
+  {{/each}}
+</ol>

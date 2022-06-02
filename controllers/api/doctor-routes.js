@@ -1,8 +1,12 @@
 const router = require("express").Router();
-const { Doctors } = require("../../models");
+const { Doctors, Clients } = require("../../models");
 
 router.get("/", (req, res) => {
-  Doctors.findAll()
+  Doctors.findAll({
+    include: {
+      model: Clients,
+    },
+  })
     .then((dbCommentData) => res.json(dbCommentData))
     .catch((err) => {
       console.log(err);
