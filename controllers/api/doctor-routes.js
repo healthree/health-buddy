@@ -1,8 +1,8 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+const { Doctors } = require("../../models");
 
 router.get("/", (req, res) => {
-  User.findAll()
+  Doctors.findAll()
     .then((dbCommentData) => res.json(dbCommentData))
     .catch((err) => {
       console.log(err);
@@ -11,14 +11,14 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  User.findOne({
+  Doctors.findOne({
     where: {
       id: req.params.id,
     },
   })
     .then((dbPostData) => {
       if (!dbPostData) {
-        res.status(404).json({ message: "No user found with this id" });
+        res.status(404).json({ message: "No doctor found with this id" });
         return;
       }
       res.json(dbPostData);
