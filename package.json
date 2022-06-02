@@ -2,9 +2,12 @@
   "name": "health-buddy",
   "version": "1.0.0",
   "description": "A full stack application for a hospital set up, that can be used both by walk in patients and staff at the hospital",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "seeds": "node seeds",
+    "test": "jest",
+    "start": "node server.js",
+    "develop": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,14 @@
   },
   "homepage": "https://github.com/healthree/health-buddy#readme",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.20.1"
   }
 }
