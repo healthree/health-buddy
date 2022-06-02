@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./public/images/health buddy white.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Health Buddy</title>
+</head>
+
+<body>
+  <div class="main-wrap">
+    <header>
+      <img src="../images/healthbuddywhite.png" alt="" width="400" height="125">
+      <nav class="main-nav">
+        <a href="/about-us">About Us/Our Team</a>
+        {{#if loggedIn}}
+        {{!-- Change to respective javascript name --}}
+        {{!-- <h3>Welcome {{ user.name }}</h3> --}}
+        <a href="/dashboard">Patient Information</a>
+        <button id="logout" class="btn-no-style">Signout</button>
+        {{else}}
+        <a href="/login">Admin Access</a>
+        {{/if}}
+      </nav>
+    </header>
+    {{!-- make background for main a picture --}}
+    <main class="main-main">
+      
+      {{{ body }}}
+
+    {{!-- previous loggin code --}}
+      {{!-- {{#if loggedIn}}
+      <button id="patient-btn">New Patient</button>
+      <button id="edit-btn">Edit File</button>
+      <button id="delete-btn">Delete File</button>
+      <button id="access-btn">View File</button>
+      <button id="doctors-btn">Doctors List</button>
+
+      {{#if patients.length}}
+      <section>
+        <h2>Your Patients:</h2>
+        <ol>
+          {{#each patients as |patient|}}
+          <li style="list-style-type: none;">
+            {{> patient-information patient}}
+            {{!--/maim/edit/{{patient.id}} --}}
+            {{!-- <a href="/edit/{{patient.id}}" id="edit-patient-btn">Edit</a>
+            <button id="delete-patient-btn">Delete</button>
+          </li>
+          {{/each}}
+        </ol>
+      </section>
+      {{/if}}
+
+      {{else}}
+      <button id="bmi-btn">Check BMI</button>
+      <button id="who-btn">Who Should I See?</button>
+      {{/if}} --}}
+    </main>
+  </div>
+  <footer>
+    <div class="footer-logo">
+      <img src="../images/healthbuddy-footerA.png" alt="" width="90" height="75">
+    </div>
+    <div class="footer-address">
+      1 King Street West
+      Toronto, ON M5A 2C4
+      (416) 555-5555
+    </div>
+    <div class="footer-copy">
+      <p><span>Made by team Healthree</p>
+      &copy; 2022 Health Buddy, Inc.
+    </div>
+  </footer>
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  <script src="/javascript/edit-patient.js"></script>
+  <script src="/javascript/delete-patient.js"></script>
+  {{/if}}
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
