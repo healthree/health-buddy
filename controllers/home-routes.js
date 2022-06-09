@@ -50,6 +50,32 @@ router.get("/doctor/:id", (req, res) => {
     });
 });
 
+router.get("/client/:id", (req, res) => {
+  Clients.findOne({
+    where: {
+      id: req.params.id,
+    }
+  })
+    .then((dbPostData) => {
+      if (!dbPostData) {
+        res.status(404).json({ message: "No client found with this id" });
+        return;
+      }
+
+      const client = dbPostData.get({ plain: true });
+      
+
+      res.render("single-client", {
+        client,
+        loggedIn: req.session.loggedIn,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.get("/login", (req, res) => {
   res.render("login");
 });
