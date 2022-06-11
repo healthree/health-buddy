@@ -30,38 +30,8 @@
       </nav>
     </header>
     {{!-- make background for main a picture --}}
-    <main class="main-main">
-      
-      {{{ body }}}
-
-    {{!-- previous loggin code --}}
-      {{!-- {{#if loggedIn}}
-      <button id="patient-btn">New Patient</button>
-      <button id="edit-btn">Edit File</button>
-      <button id="delete-btn">Delete File</button>
-      <button id="access-btn">View File</button>
-      <button id="doctors-btn">Doctors List</button>
-
-      {{#if patients.length}}
-      <section>
-        <h2>Your Patients:</h2>
-        <ol>
-          {{#each patients as |patient|}}
-          <li style="list-style-type: none;">
-            {{> patient-information patient}}
-            {{!--/maim/edit/{{patient.id}} --}}
-            {{!-- <a href="/edit/{{patient.id}}" id="edit-patient-btn">Edit</a>
-            <button id="delete-patient-btn">Delete</button>
-          </li>
-          {{/each}}
-        </ol>
-      </section>
-      {{/if}}
-
-      {{else}}
-      <button id="bmi-btn">Check BMI</button>
-      <button id="who-btn">Who Should I See?</button>
-      {{/if}} --}}
+    <main>
+      {{{body}}}
     </main>
   </div>
   <footer>
