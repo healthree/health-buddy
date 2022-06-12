@@ -87,7 +87,7 @@ THEN I can create/read/edit/delete client information
 WHEN a new client is added to the database
 
 THEN I can link the client to an existing database of the doctors
-
+<br/><br/>
 
 **ACCEPTANCE TEST FOR USER STORY**
 
