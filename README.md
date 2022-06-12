@@ -53,23 +53,49 @@ You can access the app at: [Health Buddy](https://health-buddy-group3.herokuapp.
 
 ## Usage
 
-* AS a walk-in client
-* WHEN I click calculate BMI
-* THEN I am asked to input biometric information about myself
-* WHEN I click submit
-* THEN I my BMI is displayed along with health risks that I could be in
-* WHEN I scroll down
-* THEN I can access the list of specialty medical professionals at the clinic
-* SO THAT I can consider enrolling with the clinic
+**AS A WALK IN CLIENT**
 
-* AS a clinic staff
-* WHEN I click log in
-* THEN I am asked to input my login information
-* WHEN I log in successfully
-* THEN I can create/read/edit/delete client information
-* WHEN a new client is added to the database
-* THEN I can link the client to an existing database of the doctors 
+WHEN I click calculate BMI
 
+THEN I am asked to input biometric information about myself
+<br/><br/>
+
+WHEN I click submit
+
+THEN I my BMI is displayed along with health risks that I could be in
+<br/><br/>
+
+WHEN I scroll down
+
+THEN I can access the list of specialty medical professionals at the clinic
+
+SO THAT I can consider enrolling with the clinic
+<br/><br/>
+
+**AS A CLINIC STAFF**
+
+WHEN I click log in
+
+THEN I am asked to input my login information
+<br/><br/>
+
+WHEN I log in successfully
+
+THEN I can create/read/edit/delete client information
+<br/><br/>
+
+WHEN a new client is added to the database
+
+THEN I can link the client to an existing database of the doctors
+
+ACCEPTANCE TEST FOR USER STORY
+<br/><br/>
+
+GIVEN there is a log in option
+
+WHEN a successful login happens
+
+THEN only I am given the option to create/read/edit/delete client information
 
 <a name="license"></a>
 
