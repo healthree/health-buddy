@@ -1,12 +1,33 @@
-<form class="BMI-form">
-  <div class="BMI-form-height">
-    <label for="BMI-height" style="">Height:</label>
-    <input type="text" id="BMI-height" size="50" />
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
+      <form class="BMI-form">
+        <div class="mb-3">
+          <label for="BMI-height" style="">Height:
+            <i>in meters (m)</i></label>
+          <input type="text" name="BMI-height" class="form-control" size="20" />
+        </div>
+        <div class="mb-3">
+          <label for="BMI-weight" style="">Weight:
+            <i>in kilograms (kgs)</i></label>
+          <input type="text" name="BMI-weight" class="form-control" size="20" />
+        </div>
+        <div>
+          <button type="submit">Test</button>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <div class="card text-bg-primary mb-3 ml-5" style="max-width: 10rem;">
+        <div class="card-header" id="result-header">BMI Rate</div>
+        <div class="card-body">
+          <p class="card-text" id="result-content"></p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="BMI-form-weight">
-    <label for="BMI-weight" style="">Weight:</label>
-    <input type="text" id="BMI-weight" size="50" />
-  </div>
-</form>
-
+</div>
+<div class="main-bg">
+  <img src="../images/BMI.png" alt="" width="800" height="400" />
+</div>
 <script src="/javascript/BMI.js"></script>
