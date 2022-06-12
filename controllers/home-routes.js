@@ -95,8 +95,8 @@ router.get("/client/:id", (req, res) => {
     });
 });
 
-router.get("/bmi", (req, res) => {
-  res.render("bmi");
+router.get("/BMI", (req, res) => {
+  res.render("BMI");
 });
 
 router.get("/login", (req, res) => {

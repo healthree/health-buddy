@@ -1,7 +1,9 @@
+console.log("step1");
 async function getBMI(event) {
+  console.log("step2");
+  event.preventDefault();
   const height = document.querySelector('input[name="BMI-height"]').value;
   const weight = document.querySelector('input[name="BMI-weight"]').value;
-  event.preventDefault();
   const options = {
     method: "GET",
     headers: {
@@ -9,6 +11,7 @@ async function getBMI(event) {
       "X-RapidAPI-Host": "body-mass-index-bmi-calculator.p.rapidapi.com",
     },
   };
+  console.log("step3");
 
   fetch(
     `https://body-mass-index-bmi-calculator.p.rapidapi.com/metric?weight=${weight}&height=${height}`,
@@ -16,6 +19,7 @@ async function getBMI(event) {
   )
     .then((response) => response.json())
     .then((data) => {
+      console.log("step4");
       var result = document.getElementById("result-content");
       result.textContent = data.bmi.toFixed(2);
     })
