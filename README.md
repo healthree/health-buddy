@@ -88,8 +88,8 @@ WHEN a new client is added to the database
 
 THEN I can link the client to an existing database of the doctors
 
-ACCEPTANCE TEST FOR USER STORY
-<br/><br/>
+
+**ACCEPTANCE TEST FOR USER STORY**
 
 GIVEN there is a log in option
 
