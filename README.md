@@ -34,7 +34,13 @@ This is an app that can be used in a health care setting where the main page dis
 
 ## Screenshot
 
+![screencapture-health-buddy-group3-herokuapp-2022-06-11-22_19_54](https://user-images.githubusercontent.com/106356642/173211642-5d96a0d6-f83b-4139-86ab-5c2149e539f2.png)
 
+![screencapture-health-buddy-group3-herokuapp-bmi-2022-06-11-22_20_12](https://user-images.githubusercontent.com/106356642/173211646-d15c9b5d-dba7-45d9-b5c3-211d1dbd2e01.png)
+
+![screencapture-health-buddy-group3-herokuapp-doctor-2022-06-11-22_20_28](https://user-images.githubusercontent.com/106356642/173211650-e63f9825-7039-42c0-933e-2572c05f5c73.png)
+
+![screencapture-health-buddy-group3-herokuapp-login-2022-06-11-22_20_43](https://user-images.githubusercontent.com/106356642/173211656-3fd7d4b0-9cda-4965-b365-02689db45345.png)
 
   
 <a name="inst"></a>
