@@ -3,7 +3,7 @@
 ![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Table of Contents
-- [Description] (#desc)
+- [Description](#desc)
 - [Screenshots](#screenshot)
 - [Installation](#inst)
 - [Usage](#usage)
@@ -34,7 +34,13 @@ This is an app that can be used in a health care setting where the main page dis
 
 ## Screenshot
 
+![screencapture-health-buddy-group3-herokuapp-2022-06-11-22_19_54](https://user-images.githubusercontent.com/106356642/173211642-5d96a0d6-f83b-4139-86ab-5c2149e539f2.png)
 
+![screencapture-health-buddy-group3-herokuapp-bmi-2022-06-11-22_20_12](https://user-images.githubusercontent.com/106356642/173211646-d15c9b5d-dba7-45d9-b5c3-211d1dbd2e01.png)
+
+![screencapture-health-buddy-group3-herokuapp-doctor-2022-06-11-22_20_28](https://user-images.githubusercontent.com/106356642/173211650-e63f9825-7039-42c0-933e-2572c05f5c73.png)
+
+![screencapture-health-buddy-group3-herokuapp-login-2022-06-11-22_20_43](https://user-images.githubusercontent.com/106356642/173211656-3fd7d4b0-9cda-4965-b365-02689db45345.png)
 
   
 <a name="inst"></a>
@@ -43,27 +49,26 @@ This is an app that can be used in a health care setting where the main page dis
 You can access the app at: [Health Buddy](https://health-buddy-group3.herokuapp.com/)
 
 
-
 <a name="usage"></a>
 
 ## Usage
 
-AS a walk-in client
-WHEN I click calculate BMI
-THEN I am asked to input biometric information about myself
-WHEN I click submit
-THEN I my BMI is displayed along with health risks that I could be in
-WHEN I scroll down
-THEN I can access the list of specialty medical professionals at the clinic
-SO THAT I can consider enrolling with the clinic
+* AS a walk-in client
+* WHEN I click calculate BMI
+* THEN I am asked to input biometric information about myself
+* WHEN I click submit
+* THEN I my BMI is displayed along with health risks that I could be in
+* WHEN I scroll down
+* THEN I can access the list of specialty medical professionals at the clinic
+* SO THAT I can consider enrolling with the clinic
 
-AS a clinic staff
-WHEN I click log in
-THEN I am asked to input my login information
-WHEN I log in successfully
-THEN I can create/read/edit/delete client information
-WHEN a new client is added to the database
-THEN I can link the client to an existing database of the doctors 
+* AS a clinic staff
+* WHEN I click log in
+* THEN I am asked to input my login information
+* WHEN I log in successfully
+* THEN I can create/read/edit/delete client information
+* WHEN a new client is added to the database
+* THEN I can link the client to an existing database of the doctors 
 
 
 <a name="license"></a>
