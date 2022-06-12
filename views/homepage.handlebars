@@ -1,15 +1,8 @@
-<ol class="patient-list">
-  {{#each doctors as |client|}}
-  <li style="list-style-type: none;">
-    {{> patient-information client }}
-  </li>
-  {{/each}}
-</ol>
-
-<ol class="doctor-list">
-  {{#each doctors as |doctor|}}
-  <li style="list-style-type: none;">
-    {{> doctor-information doctor }}
-  </li>
-  {{/each}}
-</ol>
+<div class="main-bg">
+  <img src="../images/healthbuddybg.png" alt="" width="1000" height="600" />
+</div>
+<div class="main-btn">
+  <a href="/bmi"><button id="bmi-btn">Check BMI</button></a>
+  <a href="/doctor"><button id="who-btn">Who Should I See?</button></a>
+  <a href="/issue"><button id="issue-btn">Health Issue Details</Details></button></a>
+</div>

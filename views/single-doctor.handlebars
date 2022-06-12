@@ -1,0 +1,9 @@
+{{> single-doctor-information doctor}}
+<br>
+{{#if loggedIn}}
+<div class = "card">
+{{> client-information doctor}}
+</div>
+{{else}}
+{{> add-client doctor}}
+{{/if}}

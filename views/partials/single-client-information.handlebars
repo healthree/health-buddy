@@ -1,0 +1,37 @@
+<form class="edit-client">
+  <h3 class="invisible" id = "doctors_id">{{doctors_id}}</h3>
+  <div class="mb-3">
+    <label for="client-name" class="form-label">Client Name</label>
+    <textarea
+      class="form-control"
+      id="client-name"
+      rows="1"
+    >{{name}}</textarea>
+  </div>
+  <div class="mb-3">
+    <label for="Symptoms" class="form-label">Symptoms</label>
+    <textarea
+      class="form-control"
+      id="Symptoms"
+      rows="2"
+    >{{symptoms}}</textarea>
+  </div>
+  <div class="mb-3">
+    <label for="medical_history" class="form-label">Medical History</label>
+    <textarea
+      class="form-control"
+      id="medical_history"
+      rows="2"
+    >{{medical_history}}</textarea>
+  </div>
+  <button type="submit" class="btn btn-primary edit-post-btn">Update</button>
+  <button
+    type="button"
+    id="delete-post"
+    class="btn btn-danger delete-post-btn"
+  >Delete</button>
+</section>
+</form>
+
+<script src="/javascript/edit-client.js"></script>
+<script src="/javascript/delete-client.js"></script>
