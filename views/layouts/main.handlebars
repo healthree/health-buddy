@@ -17,12 +17,13 @@
 <body>
   <div class="main-wrap">
     <header>
-      <a href="/"><img src="../images/healthbuddywhite.png" alt="" width="400" height="125"></a>
+      <img src="../images/healthbuddywhite.png" alt="" width="400" height="125">
       <nav class="main-nav">
-        <a href="https://github.com/healthree/health-buddy">About Us/Our Team</a>
+        <a href="/about-us">About Us/Our Team</a>
         {{#if loggedIn}}
         {{!-- Change to respective javascript name --}}
         {{!-- <h3>Welcome {{ user.name }}</h3> --}}
+        <a href="/dashboard">Patient Information</a>
         <button id="logout" class="btn-no-style">Signout</button>
         {{else}}
         <a href="/login">Admin Access</a>
@@ -30,8 +31,21 @@
       </nav>
     </header>
     {{!-- make background for main a picture --}}
+<<<<<<< HEAD
+    <main class="main-main">
+      {{#if loggedIn}}
+      <div class="main-bg">
+        <img src="../images/healthbuddybg.png" alt="" width="1000" height="600">
+      </div>
+      <div class="main-btn">
+        <button id="bmi-btn">Check BMI</button>
+        <button id="who-btn">Who Should I See?</button>
+      </div>
+      {{/if}}
+=======
     <main>
       {{{body}}}
+>>>>>>> 1b3b5ae3958401c400a3f9af0ca281b0e062ae75
     </main>
   </div>
   <footer>
