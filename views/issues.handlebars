@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
+      <form class="issue-form">
+        <div class="mb-3">
+          <label for="issue-Id">Issue:</label>
+          <select name="issue-Id" id="issue-Id" class="form-select">
+            <option selected>Open this select menu</option>
+            {{#each issues}}
+              <option value="{{id}}">{{name}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div>
+          <button type="submit">Get Details</button>
+        </div>
+      </form>
+    </div>
+    <div id="result" class="col invisible">
+      <div class="card text-bg-danger mb-3 ml-5">
+        <div class="card-header" id="result-header">Details</div>
+        <div class="card-body">
+          <p class="card-text" id="Description"></p>
+          <p class="card-text" id="PossibleSymptoms"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/javascript/issues.js"></script>

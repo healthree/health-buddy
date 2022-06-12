@@ -31,6 +31,13 @@ Clients.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    issue_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "issues",
+        key: "id",
+      },
+    },
     doctors_id: {
       type: DataTypes.INTEGER,
       references: {

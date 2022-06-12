@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
-const { Clients, User, Doctors } = require("../models");
+const { Clients, User, Doctors, Issues } = require("../models");
 
 router.get("/", (req, res) => {
   Doctors.findAll({
@@ -95,6 +95,20 @@ router.get("/client/:id", (req, res) => {
     });
 });
 
+router.get("/issues", (req, res) => {
+  Issues.findAll()
+    .then((dbPostData) => {
+      const issues = dbPostData.map((issues) => issues.get({ plain: true }));
+      res.render("issues", {
+        issues,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.get("/BMI", (req, res) => {
   res.render("BMI");
 });
@@ -105,6 +119,10 @@ router.get("/login", (req, res) => {
 
 router.get("/sign-up", (req, res) => {
   res.render("sign-up");
+});
+
+router.get("/issue", (req, res) => {
+  res.render("issues");
 });
 
 module.exports = router;

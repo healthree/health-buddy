@@ -1,6 +1,4 @@
-console.log("step1");
 async function getBMI(event) {
-  console.log("step2");
   event.preventDefault();
   const height = document.querySelector('input[name="BMI-height"]').value;
   const weight = document.querySelector('input[name="BMI-weight"]').value;
@@ -11,7 +9,6 @@ async function getBMI(event) {
       "X-RapidAPI-Host": "body-mass-index-bmi-calculator.p.rapidapi.com",
     },
   };
-  console.log("step3");
 
   fetch(
     `https://body-mass-index-bmi-calculator.p.rapidapi.com/metric?weight=${weight}&height=${height}`,
@@ -19,8 +16,16 @@ async function getBMI(event) {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log("step4");
       var result = document.getElementById("result-content");
+      var header = document.getElementById("BMIheader");
+      header.setAttribute("class", "card text-bg-light mb-3 ml-5");
+      if (25 > data.bmi && data.bmi > 18.5) {
+        header.classList.replace("text-bg-light", "text-bg-success");
+      } else if (30 > data.bmi && data.bmi > 25) {
+        header.classList.replace("text-bg-light", "text-bg-warning");
+      } else if (data.bmi > 30) {
+        header.classList.replace("text-bg-light", "text-bg-danger");
+      }
       result.textContent = data.bmi.toFixed(2);
     })
     .catch((err) => console.error(err));
