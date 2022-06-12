@@ -43,30 +43,6 @@ button:hover {
   color: #1cccd3;
 }
 
-/* .post-list {
-  margin: 0 0 0 -15%;
-  padding: 0;
-} 
-textarea, input {
-  padding: .5%;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-textarea:focus, input:focus {
-  outline: none;
-  border: 1px solid #3486eb;
-}
-textarea {
-  min-width: 40%;
-  min-height: 100px;
-}
-form > div {
-  margin-bottom: 2%;
-}
-form label {
-  display: block;
-} */
-
 .main-wrap {
   width: 100%;
   min-height: 100%;
@@ -78,6 +54,7 @@ form label {
 
 .main-bg {
   margin-left: 25%;
+  margin-top: -2%;
 }
 
 .main-btn {
@@ -90,7 +67,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5% 1%;
+  padding: 0 1%;
 }
 
 main {
