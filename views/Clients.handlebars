@@ -1,0 +1,17 @@
+{{#each doctors}}
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{name}}:</h5>
+    </div>
+
+    {{#each clients}}
+      <div class="card-body">
+        <a href="/client/{{id}}"><h6 class="card-title">{{name}}</h6></a>
+        <h6 class="card-subtitle mb-2 text-muted">
+          {{symptoms}}</h6>
+        <i><p class="card-text">medical_history: {{medical_history}}</p></i>
+      </div>
+    {{/each}}
+
+  </div>
+{{/each}}

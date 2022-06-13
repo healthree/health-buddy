@@ -1,11 +1,16 @@
 const router = require("express").Router();
-const { Doctors, Clients } = require("../../models");
+const { Doctors, Clients, User } = require("../../models");
 
 router.get("/", (req, res) => {
   Doctors.findAll({
-    include: {
-      model: Clients,
-    },
+    include: [
+      {
+        model: Clients,
+      },
+      {
+        model: User,
+      },
+    ],
   })
     .then((dbCommentData) => res.json(dbCommentData))
     .catch((err) => {
@@ -19,6 +24,14 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
+    include: [
+      {
+        model: Clients,
+      },
+      {
+        model: User,
+      },
+    ],
   })
     .then((dbPostData) => {
       if (!dbPostData) {

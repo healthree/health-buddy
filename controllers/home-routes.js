@@ -22,6 +22,26 @@ router.get("/", (req, res) => {
     });
 });
 
+router.get("/dashboard", (req, res) => {
+  Doctors.findAll({
+    include: {
+      model: Clients,
+      attributes: ["name", "symptoms"],
+    },
+  })
+    .then((dbPostData) => {
+      const doctors = dbPostData.map((doctors) => doctors.get({ plain: true }));
+      res.render("dashboard", {
+        doctors,
+        loggedIn: req.session.loggedIn,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.get("/doctor", (req, res) => {
   Doctors.findAll({
     include: {
@@ -61,6 +81,25 @@ router.get("/doctor/:id", (req, res) => {
 
       res.render("single-doctor", {
         doctor,
+        loggedIn: req.session.loggedIn,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+router.get("/Clients", (req, res) => {
+  Doctors.findAll({
+    include: {
+      model: Clients,
+    },
+  })
+    .then((dbPostData) => {
+      const doctors = dbPostData.map((doctors) => doctors.get({ plain: true }));
+      res.render("Clients", {
+        doctors,
         loggedIn: req.session.loggedIn,
       });
     })
@@ -117,8 +156,8 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.get("/sign-up", (req, res) => {
-  res.render("sign-up");
+router.get("/signup", (req, res) => {
+  res.render("signup");
 });
 
 router.get("/issue", (req, res) => {
